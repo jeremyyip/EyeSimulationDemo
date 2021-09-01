@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resource/qml/main.qml</file>
+        <file>resource/qml/enum/Enum.qml</file>
+        <file>resource/qml/setup/Setup.qml</file>
+        <file>resource/picture/setup.png</file>
+        <file>resource/qml/home/Home.qml</file>
+        <file>resource/qml/cataract/CataractLowLevel.qml</file>
+        <file>resource/picture/lowlevel/dingwei.png</file>
+        <file>resource/picture/lowlevel/kangzhenchan.png</file>
+        <file>resource/picture/lowlevel/niezicaozuo.png</file>
+        <file>resource/picture/midlevel/pihe.png</file>
+        <file>resource/picture/midlevel/sinang.png</file>
+        <file>resource/qml/cataract/Cataract.qml</file>
+        <file>resource/qml/cataract/CataractMidLevel.qml</file>
+        <file>resource/qml/cataract/lowlevelcourse/LLNavigasion.qml</file>
+    </qresource>
+</RCC>
