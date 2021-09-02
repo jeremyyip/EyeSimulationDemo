@@ -19,13 +19,14 @@ SOURCES += \
         Src/Communication/UDPCommunicator/UdpCommunicator.cpp \
         Src/GUIInterface/CataractInteract/Training/HighLevel/HLBimanualInteract.cpp \
         Src/GUIInterface/CataractInteract/Training/HighLevel/HLTremorInteract.cpp \
-        Src/GUIInterface/CataractInteract/Training/LowLevel/LLBimanualInteract.cpp \
+        Src/GUIInterface/CataractInteract/Training/LowLevel/LLAntiTrembleInteract.cpp \
         Src/GUIInterface/CataractInteract/Training/LowLevel/LLNavigasionInteract.cpp \
         Src/GUIInterface/CataractInteract/Training/MidLevel/MLBimanualInteract.cpp \
         Src/GUIInterface/CataractInteract/Training/MidLevel/MLTremorInteract.cpp \
         Src/GUIInterface/SetupInteract.cpp \
         Src/GUIInterface/StartupManager/StartupManager.cpp \
         Src/Modules/Cataract/Training/HighLevel/HLTremorModule.cpp \
+        Src/Modules/Cataract/Training/LowLevel/LLAntiTrembleModule.cpp \
         Src/Modules/Cataract/Training/LowLevel/LLNavigasionModule.cpp \
         Src/Modules/Cataract/Training/MidLevel/MLTremorModule.cpp \
         main.cpp
@@ -49,13 +50,14 @@ HEADERS += \ \
     Src/Communication/UDPCommunicator/UdpCommunicator.h \
     Src/GUIInterface/CataractInteract/Training/HighLevel/HLBimanualInteract.h \
     Src/GUIInterface/CataractInteract/Training/HighLevel/HLTremorInteract.h \
-    Src/GUIInterface/CataractInteract/Training/LowLevel/LLBimanualInteract.h \
+    Src/GUIInterface/CataractInteract/Training/LowLevel/LLAntiTrembleInteract.h \
     Src/GUIInterface/CataractInteract/Training/LowLevel/LLNavigasionInteract.h \
     Src/GUIInterface/CataractInteract/Training/MidLevel/MLBimanualInteract.h \
     Src/GUIInterface/CataractInteract/Training/MidLevel/MLTremorInteract.h \
     Src/GUIInterface/SetupInteract.h \
     Src/GUIInterface/StartupManager/StartupManager.h \
     Src/Modules/Cataract/Training/HighLevel/HLTremorModule.h \
+    Src/Modules/Cataract/Training/LowLevel/LLAntiTrembleModule.h \
     Src/Modules/Cataract/Training/LowLevel/LLNavigasionModule.h \
     Src/Modules/Cataract/Training/MidLevel/MLTremorModule.h
 
