@@ -41,12 +41,14 @@ StartupManager::~StartupManager()
     if(unity_process != nullptr)    delete unity_process;
 
     if(ll_navigasion_module != nullptr) delete ll_navigasion_module;
+    if(ll_antitremble_module != nullptr) delete ll_antitremble_module;
 }
 
 void StartupManager::Initialization()
 {
     udp_comm = new UdpCommunicator();
     ll_navigasion_module = new LLNavigasionModule(udp_comm);
+    ll_antitremble_module = new LLAntiTrembleModule(udp_comm);
 
     timer = new QTimer();
     connect(timer,SIGNAL(timeout()),this,SLOT(TimerElapse()));
@@ -63,5 +65,10 @@ UdpCommunicator *StartupManager::GetUdpCommunicatorPtr()
 LLNavigasionModule * StartupManager::GetLLNavigasionModulePtr()
 {
     return ll_navigasion_module;
+}
+
+LLAntiTrembleModule *StartupManager::GetLLAntiTrembleModulePtr()
+{
+    return  ll_antitremble_module;
 }
 

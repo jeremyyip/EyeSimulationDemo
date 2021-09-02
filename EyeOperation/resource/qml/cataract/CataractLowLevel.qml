@@ -93,7 +93,9 @@ Rectangle{
         }
 
         onClicked: {
-
+            global_var.ll_antitremble_init = true;
+            global_var.current_page_id = Enum.ECataPageID.CataPageLLAntitremble;
+            console.log(global_var.current_page_id);
         }
 
     }

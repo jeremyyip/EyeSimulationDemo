@@ -27,7 +27,7 @@ Item{
     {
         CataPageHome = 100,
         CataPageLLNavigasion = 101,
-
+        CataPageLLAntitremble = 102,
 
         EndNoneCataPage = 499
     }
@@ -43,8 +43,8 @@ Item{
     enum ELowLevelCmdID
     {
         LLCmdIDNone = 0,
-        LLNavStartCmdID = 1
-
+        LLNavStartCmdID = 1,
+        LLAntiTrembleStartCmdID = 2
     }
 
 

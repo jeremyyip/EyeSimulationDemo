@@ -17,6 +17,8 @@ CmdSets::CmdSets()
 
     //map initilization
     cmd_map.insert(std::pair<unsigned int,Pfun>(1,&CataractCmdProc::LLNavigasionCmdProc));
+    cmd_map.insert(std::pair<unsigned int,Pfun>(2,&CataractCmdProc::LLAntiTrembleCmdProc));
+
 }
 
 CmdSets::~CmdSets()

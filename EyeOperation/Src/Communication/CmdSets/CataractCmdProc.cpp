@@ -28,11 +28,27 @@ void CataractCmdProc::LLNavigasionCmdProc(void *data_in,unsigned int lenth)
     }
     else
     {
-        char b[2]={0x00};
+        /*char b[2]={0x00};
         b[0]=((char *)data_in)[0];
         b[1]=((char *)data_in)[1];
         int i =0;
-        i++;
+        i++;*/
     }
 
+}
+
+void CataractCmdProc::LLAntiTrembleCmdProc(void *data_in, unsigned int lenth)
+{
+    if(lenth == 0)
+    {
+        emit LLAntiTrembleDataNotify();
+    }
+    else
+    {
+        /*char b[2]={0x00};
+        b[0]=((char *)data_in)[0];
+        b[1]=((char *)data_in)[1];
+        int i =0;
+        i++;*/
+    }
 }

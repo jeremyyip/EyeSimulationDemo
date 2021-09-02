@@ -24,9 +24,11 @@ public:
 
 public:
     void LLNavigasionCmdProc(void *data_in,unsigned int lenth);
+    void LLAntiTrembleCmdProc(void *data_in,unsigned int lenth);
 
 signals:
     void LLNavigasionDataNotify();
+    void LLAntiTrembleDataNotify();
 
 };
 

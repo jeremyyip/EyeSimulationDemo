@@ -16,6 +16,7 @@
 #include <QProcess>
 
 #include "../../Modules/Cataract/Training/LowLevel/LLNavigasionModule.h"
+#include "../../Modules/Cataract/Training/LowLevel/LLAntiTrembleModule.h"
 
 class StartupManager:public QObject
 {
@@ -31,6 +32,7 @@ public:
     UdpCommunicator *GetUdpCommunicatorPtr();
 
     LLNavigasionModule  *GetLLNavigasionModulePtr();
+    LLAntiTrembleModule  *GetLLAntiTrembleModulePtr();
 
 private:
     StartupManager();
@@ -49,7 +51,7 @@ private:
 
 private:
     LLNavigasionModule *ll_navigasion_module;
-
+    LLAntiTrembleModule *ll_antitremble_module;
 
 };
 

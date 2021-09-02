@@ -5,6 +5,7 @@
 #include "Src/GUIInterface/StartupManager/StartupManager.h"
 #include "Src/GUIInterface/SetupInteract.h"
 #include "Src/GUIInterface/CataractInteract/Training/LowLevel/LLNavigasionInteract.h"
+#include "Src/GUIInterface/CataractInteract/Training/LowLevel/LLAntiTrembleInteract.h"
 
 int main(int argc, char *argv[])
 {
@@ -20,6 +21,7 @@ int main(int argc, char *argv[])
     //register C++ to qml
     qmlRegisterType<SetupInteract>("CSS.SetupInteract",1,0,"SetupInteract");
     qmlRegisterType<LLNavigasionInteract>("CSS.LLNavigasionInteract",1,0,"LLNavigasionInteract");
+    qmlRegisterType<LLAntiTrembleInteract>("CSS.LLAntiTrembleInteract",1,0,"LLAntiTrembleInteract");
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/resource/qml/main.qml"));

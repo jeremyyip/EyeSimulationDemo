@@ -35,7 +35,7 @@ Window {
         property int current_cata_level: 500  //default is low level course
 
         property bool ll_navi_init: true
-
+        property bool ll_antitremble_init: true
     }
 
     id: window
@@ -66,9 +66,9 @@ Window {
     }
 
     //low level course page(should call it here as its visibility depends on top window rather than a other page)
-    LLNavigasion{
+    LLNavigasion{}
 
-    }
+    LLAntiTremble{}
 
     /*
     //Virtual Keyboard
