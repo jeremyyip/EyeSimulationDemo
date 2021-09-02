@@ -14,5 +14,6 @@
         <file>resource/qml/cataract/Cataract.qml</file>
         <file>resource/qml/cataract/CataractMidLevel.qml</file>
         <file>resource/qml/cataract/lowlevelcourse/LLNavigasion.qml</file>
+        <file>resource/qml/cataract/lowlevelcourse/LLAntiTremble.qml</file>
     </qresource>
 </RCC>
