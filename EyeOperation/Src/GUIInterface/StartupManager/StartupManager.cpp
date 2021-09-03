@@ -69,6 +69,6 @@ LLNavigasionModule * StartupManager::GetLLNavigasionModulePtr()
 
 LLAntiTrembleModule *StartupManager::GetLLAntiTrembleModulePtr()
 {
-    return  ll_antitremble_module;
+    return  ll_antitremble_module
 }
 
