@@ -55,7 +55,7 @@ Rectangle{
         MouseArea{
             anchors.fill:parent
 
-            hoverEnabled: false
+            hoverEnabled: false	//for touch using false, for Mouse using true
 
             onEntered: {
                 navcourse_lowlevel_1.nav_opacity = 0.8
@@ -113,7 +113,7 @@ Rectangle{
             anchors.fill:parent
 
             onEntered: {
-                //navcourse_lowlevel_2.opacity = 0.8;
+                navcourse_lowlevel_2.opacity = 0.8;
             }
 
             onExited: {
