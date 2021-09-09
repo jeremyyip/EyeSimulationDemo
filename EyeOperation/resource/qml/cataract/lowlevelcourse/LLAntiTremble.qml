@@ -86,7 +86,7 @@ Rectangle{
         anchors.top: llantitremble_title.bottom
         anchors.topMargin: 100
 
-        source: "qrc:/resource/picture/lowlevel/kangzhenchan.png";
+        source: "qrc:/resource/picture/lowlevel/kangzhenchan2.png";
 
     }
 

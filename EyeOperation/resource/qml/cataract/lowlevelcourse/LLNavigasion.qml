@@ -86,7 +86,7 @@ Rectangle{
         anchors.top: llnavigasion_title.bottom
         anchors.topMargin: 100
 
-        source: "qrc:/resource/picture/lowlevel/dingwei.png";
+        source: "qrc:/resource/picture/lowlevel/dingwei2.png";
 
     }
 

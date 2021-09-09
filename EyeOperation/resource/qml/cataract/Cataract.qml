@@ -50,8 +50,8 @@ Rectangle{
 
             anchors.top: parent.top
             anchors.topMargin: 30
-            anchors.left: parent.left
-            anchors.leftMargin: 374
+            anchors.horizontalCenter: parent.horizontalCenter
+
 
             font.bold: true
             font.pixelSize: 35
@@ -64,9 +64,8 @@ Rectangle{
     }
 
     //course choose rectangle
-    CataractLowLevel{
-
-    }
+    CataractLowLevelNav{}
+    CataractLowLevelAntiTremble{}
 
     CataractMidLevel{
 
@@ -91,7 +90,8 @@ Rectangle{
 
             width: 120
             height: 120
-            color: (global_var.current_cata_level == Enum.ECataLevelChoose.CataLowLevel)?"chartreuse":"darkgrey";
+            color: (global_var.current_cata_level>= Enum.ECataLevelChoose.CataLowLevelNav
+                    && global_var.current_cata_level< Enum.ECataLevelChoose.CataLowLevelMax)?"chartreuse":"darkgrey";
             border.color: "black"
             radius: 60
 
@@ -115,7 +115,7 @@ Rectangle{
                 anchors.fill: parent
 
                 onClicked: {
-                    global_var.current_cata_level = Enum.ECataLevelChoose.CataLowLevel;
+                    global_var.current_cata_level = Enum.ECataLevelChoose.CataLowLevelNav;
                     console.log(global_var.current_cata_level);
                 }
 
@@ -161,8 +161,6 @@ Rectangle{
 
         }
 
-
-
         //High level button
         Rectangle{
             id: high_level_bth
@@ -200,7 +198,6 @@ Rectangle{
             }
 
         }
-
 
         //Back home button
         Rectangle{
@@ -245,7 +242,7 @@ Rectangle{
                 }
 
                 onClicked: {
-                    global_var.current_cata_level = Enum.ECataLevelChoose.CataLowLevel;     //reset course level
+                    global_var.current_cata_level = Enum.ECataLevelChoose.CataLowLevelNav;     //reset course level
                     global_var.current_page_id = Enum.EPageID.HomePage; //change to home page
                 }
 
@@ -254,6 +251,84 @@ Rectangle{
         }
 
     }
+
+
+    //previous and next page
+    Rectangle{
+        id: previous_page
+
+        property bool enter: false
+
+        width:60
+        height:60
+
+        visible: (global_var.ll_page_indicator ==1 )? true:false
+
+        anchors.left: parent.left
+        anchors.leftMargin: 30
+        anchors.verticalCenter: parent.verticalCenter
+
+        Image {
+            anchors.fill: parent
+
+            source: previous_page.enter? "qrc:/resource/picture/PreviousEnter.PNG":"qrc:/resource/picture/Previous.PNG"
+            fillMode: Image.PreserveAspectFit
+        }
+
+        MouseArea{
+            anchors.fill: parent
+
+            onEntered: {
+                previous_page.enter = true
+            }
+
+            onExited: {
+                previous_page.enter = false
+            }
+
+            onClicked: {
+
+            }
+
+        }
+
+    }
+
+    Rectangle{
+        id: next_page
+
+        property bool enter: false
+
+        width:60
+        height:60
+
+        visible: (global_var.ll_page_indicator !=10 )? true:false   //assume total 10 pages
+
+        anchors.right: parent.right
+        anchors.rightMargin: 30
+        anchors.verticalCenter: parent.verticalCenter
+
+        Image {
+            anchors.fill: parent
+
+            source: next_page.enter? "qrc:/resource/picture/NextEnter.PNG":"qrc:/resource/picture/Next.PNG"
+        }
+
+        MouseArea{
+            anchors.fill: parent
+
+            onEntered: {
+                next_page.enter = true
+            }
+
+            onExited: {
+                next_page.enter = false
+            }
+
+        }
+
+    }
+
 
 
 }

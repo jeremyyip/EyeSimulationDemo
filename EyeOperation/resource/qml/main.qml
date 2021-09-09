@@ -36,6 +36,10 @@ Window {
 
         property bool ll_navi_init: true
         property bool ll_antitremble_init: true
+
+        property int ll_page_indicator: 1  //page 1(default)
+
+        property real ll_nav1_opacity: 1
     }
 
     id: window
@@ -67,7 +71,6 @@ Window {
 
     //low level course page(should call it here as its visibility depends on top window rather than a other page)
     LLNavigasion{}
-
     LLAntiTremble{}
 
     /*

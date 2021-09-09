@@ -35,9 +35,14 @@ Item{
     //level enum of cataract
     enum ECataLevelChoose
     {
-        CataLowLevel = 500,
-        CataMidLevel = 501,
-        CataHighLevel = 502
+        CataLowLevelNav = 500,
+        CataLowLevelAntiTremble = 501,
+
+        CataLowLevelMax = 599,
+
+        CataMidLevel = 600,
+
+        CataHighLevel = 700
     }
 
     enum ELowLevelCmdID

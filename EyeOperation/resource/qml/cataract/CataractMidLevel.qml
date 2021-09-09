@@ -44,8 +44,8 @@ Rectangle{
         background: Image{
             anchors.fill: parent
 
-            source: "qrc:/resource/picture/midlevel/sinang.png"
-
+            source: "qrc:/resource/picture/midlevel/sinang2.png"
+            fillMode: Image.PreserveAspectFit
         }
 
         onClicked: {
@@ -84,7 +84,8 @@ Rectangle{
         background: Image{
             anchors.fill: parent
 
-            source: "qrc:/resource/picture/midlevel/pihe.png"
+            source: "qrc:/resource/picture/midlevel/pihe2.png"
+            fillMode: Image.PreserveAspectFit
 
         }
 
@@ -120,7 +121,7 @@ Rectangle{
         anchors.top: parent.top
         anchors.topMargin: 20
 
-        opacity: hovered? 0.8 : 1
+        //opacity: hovered? 0.8 : 1
 
         /*
         background: Image{
@@ -161,7 +162,7 @@ Rectangle{
         anchors.top: parent.top
         anchors.topMargin: 20
 
-        opacity: hovered? 0.8 : 1
+        //opacity: hovered? 0.8 : 1
 
         /*
         background: Image{
@@ -203,7 +204,7 @@ Rectangle{
         anchors.top: course_midlevel_1.bottom
         anchors.topMargin: 60
 
-        opacity: hovered? 0.8 : 1
+        //opacity: hovered? 0.8 : 1
 
         /*
         background: Image{
@@ -244,7 +245,7 @@ Rectangle{
         anchors.top: course_midlevel_2.bottom
         anchors.topMargin: 60
 
-        opacity: hovered? 0.8 : 1
+        //opacity: hovered? 0.8 : 1
 
         /*
         background: Image{
@@ -285,7 +286,7 @@ Rectangle{
         anchors.top: course_midlevel_3.bottom
         anchors.topMargin: 60
 
-        opacity: hovered? 0.8 : 1
+        //opacity: hovered? 0.8 : 1
 
         /*
         background: Image{
@@ -327,7 +328,7 @@ Rectangle{
         anchors.top: course_midlevel_4.bottom
         anchors.topMargin: 60
 
-        opacity: hovered? 0.8 : 1
+        //opacity: hovered? 0.8 : 1
 
         /*
         background: Image{
