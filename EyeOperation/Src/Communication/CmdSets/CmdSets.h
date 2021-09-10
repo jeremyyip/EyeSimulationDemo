@@ -15,8 +15,10 @@
 #include "CataractCmdProc.h"
 
 #include <unordered_map>
+#include <functional>
 
-typedef void (CataractCmdProc::*Pfun)(void *data_in,unsigned int lenth);
+//typedef void (CataractCmdProc::*Pfun)(void *data_in,unsigned int lenth);
+typedef std::function<void(void*,unsigned int)> Pfun;
 
 class CmdSets
 {
@@ -29,6 +31,7 @@ public:
     CataractCmdProc *GetCataractCmdProcPtr();   //get ptr for modules
 
 private:
+
     CataractCmdProc *cata_proc;
     std::unordered_map<unsigned int,Pfun> cmd_map;
 

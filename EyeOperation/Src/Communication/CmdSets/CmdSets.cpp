@@ -16,9 +16,13 @@ CmdSets::CmdSets()
     cata_proc = new CataractCmdProc();
 
     //map initilization
-    cmd_map.insert(std::pair<unsigned int,Pfun>(1,&CataractCmdProc::LLNavigasionCmdProc));
-    cmd_map.insert(std::pair<unsigned int,Pfun>(2,&CataractCmdProc::LLAntiTrembleCmdProc));
+    //cmd_map.insert(std::pair<unsigned int,Pfun>(1,&CataractCmdProc::LLNavigasionCmdProc));
+    //cmd_map.insert(std::pair<unsigned int,Pfun>(2,&CataractCmdProc::LLAntiTrembleCmdProc));
+    cmd_map.insert(std::pair<unsigned int,Pfun>(1,
+                   std::bind(&CataractCmdProc::LLNavigasionCmdProc,cata_proc,std::placeholders::_1,std::placeholders::_2)));
 
+    cmd_map.insert(std::pair<unsigned int,Pfun>(2,
+                   std::bind(&CataractCmdProc::LLAntiTrembleCmdProc,cata_proc,std::placeholders::_1,std::placeholders::_2)));
 }
 
 CmdSets::~CmdSets()
@@ -38,7 +42,8 @@ void CmdSets::ProcessCataract(unsigned int cmd_id, void *data_in, unsigned int l
     }
 
     Pfun func = iter->second;
-    (cata_proc->*func)(data_in,lenth);
+    //(cata_proc->*func)(data_in,lenth);
+    func(data_in,lenth);
 
 }
 
