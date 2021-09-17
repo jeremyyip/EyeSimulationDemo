@@ -37,7 +37,7 @@ Rectangle{
         height: 140
 
         anchors.left: parent.left
-        anchors.leftMargin: 140
+        anchors.leftMargin: 160
         anchors.top: parent.top
         anchors.topMargin: 20
 
@@ -46,12 +46,14 @@ Rectangle{
         Image{
             anchors.fill: parent
 
-            source: "qrc:/resource/picture/lowlevel/dingwei.png"
+            source: "qrc:/resource/picture/lowlevel/kangzhenchan2.png"
 
         }
 
         MouseArea{
             anchors.fill:parent
+
+            hoverEnabled: false
 
             onEntered: {
                 antitremblecourse_lowlevel_1.opacity = 0.8;
@@ -62,9 +64,11 @@ Rectangle{
             }
 
             onClicked: {
-                /*global_var.ll_navi_init = true;
-                global_var.current_page_id = Enum.ECataPageID.CataPageLLNavigasion;
-                console.log(global_var.current_page_id);*/
+                global_var.ll_antitremble_init = true;
+                global_var.ll_antitremble1_source = "qrc:/resource/qml/cataract/lowlevelcourse/LLAntiTremble.qml"
+                global_var.current_page_id = Enum.ECataPageID.CataPageLLAntitremble;
+
+                console.log(global_var.current_page_id);
             }
         }
 
@@ -73,7 +77,7 @@ Rectangle{
     Label{
         id: antitremblecourse_lowlevel_1_label
 
-        text: "定位训练1"
+        text: "抗震颤训练1"
 
         anchors.horizontalCenter: antitremblecourse_lowlevel_1.horizontalCenter
         anchors.top: antitremblecourse_lowlevel_1.bottom
@@ -127,7 +131,7 @@ Rectangle{
     Label{
         id: antitremblecourse_lowlevel_2_label
 
-        text: "定位训练2"
+        text: "抗震颤训练2"
 
         anchors.horizontalCenter: antitremblecourse_lowlevel_2.horizontalCenter
         anchors.top: antitremblecourse_lowlevel_2.bottom
@@ -182,7 +186,7 @@ Rectangle{
     Label{
         id: antitremblecourse_lowlevel_3_label
 
-        text: "定位训练3"
+        text: "抗震颤训练3"
 
         anchors.horizontalCenter: antitremblecourse_lowlevel_3.horizontalCenter
         anchors.top: antitremblecourse_lowlevel_3.bottom
@@ -236,7 +240,7 @@ Rectangle{
     Label{
         id: antitremblecourse_lowlevel_4_label
 
-        text: "定位训练4"
+        text: "抗震颤训练4"
 
         anchors.horizontalCenter: antitremblecourse_lowlevel_4.horizontalCenter
         anchors.top: antitremblecourse_lowlevel_4.bottom
@@ -290,7 +294,7 @@ Rectangle{
     Label{
         id: antitremblecourse_lowlevel_5_label
 
-        text: "定位训练5"
+        text: "抗震颤训练5"
 
         anchors.horizontalCenter: antitremblecourse_lowlevel_5.horizontalCenter
         anchors.top: antitremblecourse_lowlevel_5.bottom
@@ -344,7 +348,7 @@ Rectangle{
     Label{
         id: antitremblecourse_lowlevel_6_label
 
-        text: "定位训练6"
+        text: "抗震颤训练6"
 
         anchors.horizontalCenter: antitremblecourse_lowlevel_6.horizontalCenter
         anchors.top: antitremblecourse_lowlevel_6.bottom
@@ -398,7 +402,7 @@ Rectangle{
     Label{
         id: antitremblecourse_lowlevel_7_label
 
-        text: "定位训练7"
+        text: "抗震颤训练7"
 
         anchors.horizontalCenter: antitremblecourse_lowlevel_7.horizontalCenter
         anchors.top: antitremblecourse_lowlevel_7.bottom
@@ -452,7 +456,7 @@ Rectangle{
     Label{
         id: antitremblecourse_lowlevel_8_label
 
-        text: "定位训练8"
+        text: "抗震颤训练8"
 
         anchors.horizontalCenter: antitremblecourse_lowlevel_8.horizontalCenter
         anchors.top: antitremblecourse_lowlevel_8.bottom

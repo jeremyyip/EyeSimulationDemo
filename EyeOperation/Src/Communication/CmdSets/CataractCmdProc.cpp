@@ -52,3 +52,51 @@ void CataractCmdProc::LLAntiTrembleCmdProc(void *data_in, unsigned int lenth)
         i++;*/
     }
 }
+
+void CataractCmdProc::LLTweezersCmdProc(void *data_in, unsigned int lenth)
+{
+    if(lenth == 0)
+    {
+        emit LLTweezersDataNotify();
+    }
+    else
+    {
+        /*char b[2]={0x00};
+        b[0]=((char *)data_in)[0];
+        b[1]=((char *)data_in)[1];
+        int i =0;
+        i++;*/
+    }
+}
+
+void CataractCmdProc::MLCapsulorhexisCmdProc(void *data_in, unsigned int lenth)
+{
+    if(lenth == 0)
+    {
+        emit MLCapsulorhexisDataNotify();
+    }
+    else
+    {
+        /*char b[2]={0x00};
+        b[0]=((char *)data_in)[0];
+        b[1]=((char *)data_in)[1];
+        int i =0;
+        i++;*/
+    }
+}
+
+void CataractCmdProc::MLChoppingCmdProc(void *data_in, unsigned int lenth)
+{
+    if(lenth == 0)
+    {
+        emit MLChoppingDataNotify();
+    }
+    else
+    {
+        /*char b[2]={0x00};
+        b[0]=((char *)data_in)[0];
+        b[1]=((char *)data_in)[1];
+        int i =0;
+        i++;*/
+    }
+}

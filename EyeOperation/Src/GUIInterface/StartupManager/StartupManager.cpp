@@ -42,6 +42,10 @@ StartupManager::~StartupManager()
 
     if(ll_navigasion_module != nullptr) delete ll_navigasion_module;
     if(ll_antitremble_module != nullptr) delete ll_antitremble_module;
+    if(ll_tweezers_module != nullptr) delete ll_tweezers_module;
+
+    if(ml_capsulorhexis_module != nullptr) delete ml_capsulorhexis_module;
+    if(ml_chopping_module != nullptr) delete ml_chopping_module;
 }
 
 void StartupManager::Initialization()
@@ -49,6 +53,10 @@ void StartupManager::Initialization()
     udp_comm = new UdpCommunicator();
     ll_navigasion_module = new LLNavigasionModule(udp_comm);
     ll_antitremble_module = new LLAntiTrembleModule(udp_comm);
+    ll_tweezers_module = new LLTweezersModule(udp_comm);
+
+    ml_capsulorhexis_module = new MLCapsulorhexisModule(udp_comm);
+    ml_chopping_module = new MLChoppingModule(udp_comm);
 
     timer = new QTimer();
     connect(timer,SIGNAL(timeout()),this,SLOT(TimerElapse()));
@@ -70,5 +78,20 @@ LLNavigasionModule * StartupManager::GetLLNavigasionModulePtr()
 LLAntiTrembleModule *StartupManager::GetLLAntiTrembleModulePtr()
 {
     return  ll_antitremble_module;
+}
+
+LLTweezersModule *StartupManager::GetLLTweezersModulePtr()
+{
+    return ll_tweezers_module;
+}
+
+MLCapsulorhexisModule *StartupManager::GetMLCapsulorhexisModulePtr()
+{
+    return ml_capsulorhexis_module;
+}
+
+MLChoppingModule *StartupManager::GetMLChoppingModulePtr()
+{
+    return ml_chopping_module;
 }
 

@@ -25,10 +25,18 @@ public:
 public:
     void LLNavigasionCmdProc(void *data_in,unsigned int lenth);
     void LLAntiTrembleCmdProc(void *data_in,unsigned int lenth);
+    void LLTweezersCmdProc(void *data_in,unsigned int lenth);
+
+    void MLCapsulorhexisCmdProc(void *data_in,unsigned int lenth);
+    void MLChoppingCmdProc(void *data_in,unsigned int lenth);
 
 signals:
     void LLNavigasionDataNotify();
     void LLAntiTrembleDataNotify();
+    void LLTweezersDataNotify();
+
+    void MLCapsulorhexisDataNotify();
+    void MLChoppingDataNotify();
 
 };
 

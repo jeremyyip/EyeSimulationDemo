@@ -1,40 +1,40 @@
 /**
 * China Simmulation Science Co.
 * Copyright(c)2021, All rights reserved.
-* @file		LLAntiTrembleModule.cpp
-* @brief	Bussiness Module Of LLAnti-Tremble (Low Level Trainning)
+* @file		MLCapsulorhexisModule.cpp
+* @brief	Bussiness Module Of Capsulorhexis (Middle Level Trainning)
 * @version	1.0.0
 * @author	Ye ChengYang
 * @email	chengyang.ye@csssim.com
-* @date		2021/9/2
+* @date		2021/9/15
 **/
 
-#include "LLAntiTrembleModule.h"
+#include "MLCapsulorhexisModule.h"
 
-LLAntiTrembleModule::LLAntiTrembleModule(UdpCommunicator *comm)
+MLCapsulorhexisModule::MLCapsulorhexisModule(UdpCommunicator *comm)
 {
     udp_comm = comm;
 
     CmdSets *cmdset_ptr = udp_comm->GetCmdSetsPtr();
     CataractCmdProc *cata_cmdproc_ptr = cmdset_ptr->GetCataractCmdProcPtr();
 
-    connect(cata_cmdproc_ptr,SIGNAL(LLAntiTrembleDataNotify()),this,SLOT(onLLAntiTrembleEvent()));
+    connect(cata_cmdproc_ptr,SIGNAL(MLCapsulorhexisDataNotify()),this,SLOT(onMLCapsulorhexisEvent()));
 }
 
-LLAntiTrembleModule::~LLAntiTrembleModule()
+MLCapsulorhexisModule::~MLCapsulorhexisModule()
 {
 
 }
 
-void LLAntiTrembleModule::StartTrainingCourse()
+void MLCapsulorhexisModule::StartTrainingCourse()
 {
     char buffer[100] = {0x00};  //define buffer
 
     //head 1byte "C=Cataract"
     buffer[0] = 'C';
 
-    //cmd_id 2bytes cmd_id=0x0011(17)
-    buffer[1] = 0x11;
+    //cmd_id 2bytes cmd_id=0x0064(100)
+    buffer[1] = 0x64;
     buffer[2] = 0x00;
 
     //data_lenth 4bytes data_lenth=0x00000000;(no data for this course)
@@ -46,10 +46,9 @@ void LLAntiTrembleModule::StartTrainingCourse()
     //data(no need)
 
     udp_comm->SendBufToUnity(buffer,7);
-
 }
 
-void LLAntiTrembleModule::onLLAntiTrembleEvent()
+void MLCapsulorhexisModule::onMLCapsulorhexisEvent()
 {
-    emit LLAntiTrembleShowEvent();   //no data to process, just notify
+    emit MLCapsulorhexisShowEvent();   //no data to process, just notify
 }

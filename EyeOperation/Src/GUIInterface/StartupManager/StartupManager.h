@@ -17,6 +17,10 @@
 
 #include "../../Modules/Cataract/Training/LowLevel/LLNavigasionModule.h"
 #include "../../Modules/Cataract/Training/LowLevel/LLAntiTrembleModule.h"
+#include "../../Modules/Cataract/Training/LowLevel/LLTweezersModule.h"
+
+#include "../../Modules/Cataract/Training/MidLevel/MLCapsulorhexisModule.h"
+#include "../../Modules/Cataract/Training/MidLevel/MLChoppingModule.h"
 
 class StartupManager:public QObject
 {
@@ -33,6 +37,10 @@ public:
 
     LLNavigasionModule  *GetLLNavigasionModulePtr();
     LLAntiTrembleModule  *GetLLAntiTrembleModulePtr();
+    LLTweezersModule  *GetLLTweezersModulePtr();
+
+    MLCapsulorhexisModule *GetMLCapsulorhexisModulePtr();
+    MLChoppingModule *GetMLChoppingModulePtr();
 
 private:
     StartupManager();
@@ -52,7 +60,10 @@ private:
 private:
     LLNavigasionModule *ll_navigasion_module;
     LLAntiTrembleModule *ll_antitremble_module;
+    LLTweezersModule *ll_tweezers_module;
 
+    MLCapsulorhexisModule *ml_capsulorhexis_module;
+    MLChoppingModule *ml_chopping_module;
 };
 
 

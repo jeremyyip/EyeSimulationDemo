@@ -23,7 +23,7 @@ private:
     enum LLAntiTrembleCmdID
     {
         eLLAntiTrembleCmdNone = 0,
-        eLLAntiTrembleCmdStart = 2
+        eLLAntiTrembleCmdStart = 17
 
     };
 

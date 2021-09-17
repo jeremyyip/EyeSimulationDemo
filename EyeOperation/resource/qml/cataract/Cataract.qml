@@ -63,13 +63,24 @@ Rectangle{
 
     }
 
+    NumberAnimation{
+        id:animation
+
+        target: cataract_home_page
+        property: "x"
+        from: -global_var.window_width
+        to:0
+        duration: 200
+        easing.type: Easing.InOutCirc
+    }
+
     //course choose rectangle
     CataractLowLevelNav{}
     CataractLowLevelAntiTremble{}
+    CataractLowLevelTweezers{}
 
-    CataractMidLevel{
-
-    }
+    CataractMidLevelCapsulor{}
+    CataractMidLevelChop{}
 
     //level choose rectangle
     Rectangle{
@@ -116,6 +127,8 @@ Rectangle{
 
                 onClicked: {
                     global_var.current_cata_level = Enum.ECataLevelChoose.CataLowLevelNav;
+                    global_var.page_indicator = 1;
+                    global_var.current_cata_level_page = global_var.ll_total_pages;
                     console.log(global_var.current_cata_level);
                 }
 
@@ -132,7 +145,8 @@ Rectangle{
             border.color: "black"
             radius: 60
 
-            color: (global_var.current_cata_level == Enum.ECataLevelChoose.CataMidLevel)?"chartreuse":"darkgrey";
+            color: (global_var.current_cata_level>= Enum.ECataLevelChoose.CataMidLevelCapsulorhexis
+                    && global_var.current_cata_level< Enum.ECataLevelChoose.CataMidLevelMax)?"chartreuse":"darkgrey";
 
             anchors.left: low_level_bth.right
             anchors.leftMargin: 120
@@ -154,7 +168,10 @@ Rectangle{
                 anchors.fill: parent
 
                 onClicked: {
-                    global_var.current_cata_level = Enum.ECataLevelChoose.CataMidLevel;
+                    global_var.current_cata_level = Enum.ECataLevelChoose.CataMidLevelCapsulorhexis;
+                    global_var.page_indicator = 1;
+                    global_var.current_cata_level_page = global_var.ml_total_pages;
+                    console.log(global_var.current_cata_level);
                 }
 
             }
@@ -262,7 +279,7 @@ Rectangle{
         width:60
         height:60
 
-        visible: (global_var.ll_page_indicator ==1 )? true:false
+        visible: (global_var.page_indicator !=1 )? true:false
 
         anchors.left: parent.left
         anchors.leftMargin: 30
@@ -287,7 +304,8 @@ Rectangle{
             }
 
             onClicked: {
-
+                global_var.current_cata_level--;  //previous
+                global_var.page_indicator--;
             }
 
         }
@@ -302,7 +320,7 @@ Rectangle{
         width:60
         height:60
 
-        visible: (global_var.ll_page_indicator !=10 )? true:false   //assume total 10 pages
+        visible: (global_var.page_indicator != global_var.current_cata_level_page )? true:false   //assume total 10 pages
 
         anchors.right: parent.right
         anchors.rightMargin: 30
@@ -323,6 +341,13 @@ Rectangle{
 
             onExited: {
                 next_page.enter = false
+            }
+
+            onClicked: {
+                //animation.start()
+                global_var.current_cata_level = global_var.current_cata_level + 1;  //next
+                global_var.page_indicator = global_var.page_indicator + 1;
+
             }
 
         }
