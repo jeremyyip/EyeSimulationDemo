@@ -96,7 +96,7 @@ Rectangle{
         width: 500
         height: 250
 
-        border.color: "lightgray"
+        //border.color: "lightgray"
         //radius: 50
         //color: "lightgray"
 
@@ -173,6 +173,8 @@ Rectangle{
 
             onClicked: {
                 global_var.current_page_id = Enum.ECataPageID.CataPageHome;
+                global_var.ll_antitremble1_source = ""; //destroy the page qml
+                console.log("ll anti-trmble1 destroy");
             }
 
         }
@@ -219,7 +221,6 @@ Rectangle{
             }
 
             onClicked: {
-                ll_antitremble_interact.eventHandler(Enum.ELowLevelCmdID.LLAntiTrembleStartCmdID);
                 global_var.window_show = false; //hidde the window
             }
 
@@ -330,6 +331,8 @@ Rectangle{
 
             onClicked: {
                 global_var.current_page_id = Enum.ECataPageID.CataPageHome;
+                global_var.ll_antitremble1_source = ""; //destroy the page qml
+                console.log("ll anti-trmble1 destroy");
             }
 
         }

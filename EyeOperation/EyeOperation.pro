@@ -21,14 +21,17 @@ SOURCES += \
         Src/GUIInterface/CataractInteract/Training/HighLevel/HLTremorInteract.cpp \
         Src/GUIInterface/CataractInteract/Training/LowLevel/LLAntiTrembleInteract.cpp \
         Src/GUIInterface/CataractInteract/Training/LowLevel/LLNavigasionInteract.cpp \
-        Src/GUIInterface/CataractInteract/Training/MidLevel/MLBimanualInteract.cpp \
-        Src/GUIInterface/CataractInteract/Training/MidLevel/MLTremorInteract.cpp \
+        Src/GUIInterface/CataractInteract/Training/LowLevel/LLTweezersInteract.cpp \
+        Src/GUIInterface/CataractInteract/Training/MidLevel/MLCapsulorhexisInteract.cpp \
+        Src/GUIInterface/CataractInteract/Training/MidLevel/MLChoppingInteract.cpp \
         Src/GUIInterface/SetupInteract.cpp \
         Src/GUIInterface/StartupManager/StartupManager.cpp \
         Src/Modules/Cataract/Training/HighLevel/HLTremorModule.cpp \
         Src/Modules/Cataract/Training/LowLevel/LLAntiTrembleModule.cpp \
         Src/Modules/Cataract/Training/LowLevel/LLNavigasionModule.cpp \
-        Src/Modules/Cataract/Training/MidLevel/MLTremorModule.cpp \
+        Src/Modules/Cataract/Training/LowLevel/LLTweezersModule.cpp \
+        Src/Modules/Cataract/Training/MidLevel/MLCapsulorhexisModule.cpp \
+        Src/Modules/Cataract/Training/MidLevel/MLChoppingModule.cpp \
         main.cpp
 
 RESOURCES += qml.qrc
@@ -52,12 +55,15 @@ HEADERS += \ \
     Src/GUIInterface/CataractInteract/Training/HighLevel/HLTremorInteract.h \
     Src/GUIInterface/CataractInteract/Training/LowLevel/LLAntiTrembleInteract.h \
     Src/GUIInterface/CataractInteract/Training/LowLevel/LLNavigasionInteract.h \
-    Src/GUIInterface/CataractInteract/Training/MidLevel/MLBimanualInteract.h \
-    Src/GUIInterface/CataractInteract/Training/MidLevel/MLTremorInteract.h \
+    Src/GUIInterface/CataractInteract/Training/LowLevel/LLTweezersInteract.h \
+    Src/GUIInterface/CataractInteract/Training/MidLevel/MLCapsulorhexisInteract.h \
+    Src/GUIInterface/CataractInteract/Training/MidLevel/MLChoppingInteract.h \
     Src/GUIInterface/SetupInteract.h \
     Src/GUIInterface/StartupManager/StartupManager.h \
     Src/Modules/Cataract/Training/HighLevel/HLTremorModule.h \
     Src/Modules/Cataract/Training/LowLevel/LLAntiTrembleModule.h \
     Src/Modules/Cataract/Training/LowLevel/LLNavigasionModule.h \
-    Src/Modules/Cataract/Training/MidLevel/MLTremorModule.h
+    Src/Modules/Cataract/Training/LowLevel/LLTweezersModule.h \
+    Src/Modules/Cataract/Training/MidLevel/MLCapsulorhexisModule.h \
+    Src/Modules/Cataract/Training/MidLevel/MLChoppingModule.h
 

@@ -69,6 +69,8 @@ Rectangle{
                 global_var.ll_navi_init = true;
                 global_var.current_page_id = Enum.ECataPageID.CataPageLLNavigasion;
                 console.log(global_var.current_page_id);
+                global_var.ll_nav1_source = "qrc:/resource/qml/cataract/lowlevelcourse/LLNavigasion.qml"
+
             }
 
         }

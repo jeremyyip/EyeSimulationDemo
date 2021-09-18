@@ -85,6 +85,8 @@ Rectangle{
         MouseArea{
             anchors.fill: parent
 
+            hoverEnabled: false
+
             onEntered: {
                 catarect_entrance.opacity = 0.7;
             }
@@ -95,6 +97,7 @@ Rectangle{
 
             onClicked: {
                 global_var.current_page_id = Enum.ECataPageID.CataPageHome;
+                global_var.page_indicator = 1;
             }
 
         }
@@ -205,6 +208,53 @@ Rectangle{
 
             color: "green"
         }
+
+    }
+
+    Rectangle{
+        id:exit_sys
+
+        width:200
+        height: 100
+        radius: 30
+
+        color: "orange"
+
+        opacity: 1
+
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 55
+        anchors.horizontalCenter: parent.horizontalCenter
+
+        Text{
+            anchors.centerIn: parent
+
+            text: "退出系统"
+            font.bold: true
+            font.pixelSize: 30
+            font.italic: false
+            font.letterSpacing: 2
+            color: "green"
+        }
+
+        MouseArea{
+            anchors.fill: parent
+
+            onEntered: {
+                exit_sys.opacity = 0.8
+            }
+
+            onExited: {
+                exit_sys.opacity = 1
+            }
+
+            onClicked: {
+                Qt.quit()
+            }
+
+        }
+
+
 
     }
 

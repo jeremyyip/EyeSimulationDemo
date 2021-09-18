@@ -36,10 +36,28 @@ Window {
 
         property bool ll_navi_init: true
         property bool ll_antitremble_init: true
+        property bool ll_tweezers_init: true
 
-        property int ll_page_indicator: 1  //page 1(default)
+        property bool ml_capsulor_init: true
+        property bool ml_chop_init: true
+
+        property int page_indicator: 1  //page 1(default)
+        property int ll_total_pages: 3
+        property int ml_total_pages: 2
+        property int hl_total_pages: 3
+        property int current_cata_level_page: ll_total_pages
 
         property real ll_nav1_opacity: 1
+        property string ll_nav1_source: ""
+
+        property string ll_antitremble1_source: ""
+
+        property string ll_tweezers1_source:""
+
+        property string ml_capsulor1_source:""
+
+        property string ml_chop1_source:""
+
     }
 
     id: window
@@ -70,8 +88,45 @@ Window {
     }
 
     //low level course page(should call it here as its visibility depends on top window rather than a other page)
-    LLNavigasion{}
-    LLAntiTremble{}
+    //LLNavigasion{}
+    //LLAntiTremble{}
+
+    //Low Level Navigasion
+    Loader{
+        id:ll_nav_1_loader
+
+        source: global_var.ll_nav1_source
+    }
+
+    //Low Level Anti-Tremble
+    Loader{
+        id:ll_antitremble_1_loader
+
+        source: global_var.ll_antitremble1_source
+    }
+
+    //Low level Tweezers
+    Loader{
+        id:ll_tweezers_1_loader
+
+        source: global_var.ll_tweezers1_source
+    }
+
+
+    //Middle Level Capsulorhexis
+    Loader{
+        id:ml_capsulor_1_loader
+
+        source: global_var.ml_capsulor1_source
+    }
+
+    //Middle Level Chop
+    Loader{
+        id:ml_chop_1_loader
+
+        source: global_var.ml_chop1_source
+    }
+
 
     /*
     //Virtual Keyboard

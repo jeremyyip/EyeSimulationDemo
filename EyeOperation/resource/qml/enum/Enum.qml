@@ -28,6 +28,10 @@ Item{
         CataPageHome = 100,
         CataPageLLNavigasion = 101,
         CataPageLLAntitremble = 102,
+        CataPageLLTweezers = 103,
+
+        CataPageMLCapsulorhexis = 150,
+        CataPageMLChop = 151,
 
         EndNoneCataPage = 499
     }
@@ -37,10 +41,14 @@ Item{
     {
         CataLowLevelNav = 500,
         CataLowLevelAntiTremble = 501,
+        CataLowLevelTweezers = 502,
 
         CataLowLevelMax = 599,
 
-        CataMidLevel = 600,
+        CataMidLevelCapsulorhexis = 600,
+        CataMidLevelChop = 601,
+
+        CataMidLevelMax = 699,
 
         CataHighLevel = 700
     }
@@ -48,8 +56,23 @@ Item{
     enum ELowLevelCmdID
     {
         LLCmdIDNone = 0,
+
         LLNavStartCmdID = 1,
-        LLAntiTrembleStartCmdID = 2
+
+        LLAntiTrembleStartCmdID = 17,
+
+        LLTweezersStartCmdID = 33
+
+
+    }
+
+    enum EMidLevelCmdID
+    {
+        MLCmdIDNone = 0,
+
+        MLCapsulorStartCmdID = 100,
+
+        MLChoppingStartCmdID = 116
     }
 
 
