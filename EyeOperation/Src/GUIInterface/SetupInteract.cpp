@@ -20,7 +20,10 @@ SetupInteract::SetupInteract()
 
 SetupInteract::~SetupInteract()
 {
-
+    if(StartupManager::GetInstance() != nullptr)
+    {
+        delete StartupManager::GetInstance();
+    }
 }
 
 void SetupInteract::OnNotifySetupReady()

@@ -21,15 +21,15 @@ CmdSets::CmdSets()
     cmd_map.insert(std::pair<unsigned int,Pfun>(1,
                    std::bind(&CataractCmdProc::LLNavigasionCmdProc,cata_proc,std::placeholders::_1,std::placeholders::_2)));
 
-    cmd_map.insert(std::pair<unsigned int,Pfun>(2,
+    cmd_map.insert(std::pair<unsigned int,Pfun>(17,
                    std::bind(&CataractCmdProc::LLAntiTrembleCmdProc,cata_proc,std::placeholders::_1,std::placeholders::_2)));
 
-    cmd_map.insert(std::pair<unsigned int,Pfun>(3,
+    cmd_map.insert(std::pair<unsigned int,Pfun>(33,
                    std::bind(&CataractCmdProc::LLTweezersCmdProc,cata_proc,std::placeholders::_1,std::placeholders::_2)));
 
     cmd_map.insert(std::pair<unsigned int,Pfun>(100,
                    std::bind(&CataractCmdProc::MLCapsulorhexisCmdProc,cata_proc,std::placeholders::_1,std::placeholders::_2)));
-    cmd_map.insert(std::pair<unsigned int,Pfun>(101,
+    cmd_map.insert(std::pair<unsigned int,Pfun>(116,
                    std::bind(&CataractCmdProc::MLChoppingCmdProc,cata_proc,std::placeholders::_1,std::placeholders::_2)));
 
 

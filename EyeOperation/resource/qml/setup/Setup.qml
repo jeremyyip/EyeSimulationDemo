@@ -46,7 +46,7 @@ Rectangle{
     }
 
     SetupInteract{
-
+        id: setup_interact
         onSetupPageChange: {
             global_var.current_page_id = Enum.EPageID.HomePage;  //change current page id to home page
         }
